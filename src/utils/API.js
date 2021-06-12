@@ -3,7 +3,7 @@ const BASEURL = "https://randomuser.me/api/";
 // const APIKEY = "&apikey=trilogy";
 
 export default {
-  getAll: function(query) {
+  getAll: function() {
     return axios.get(BASEURL + "?results=5000")
   },
   search: function(query) {
