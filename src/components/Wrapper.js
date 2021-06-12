@@ -47,6 +47,7 @@ class Wrapper extends Component {
               // heading={this.state.results.name || "Search for an Employee"}
             >
               {this.state.results.name.first ? (
+                this.state.results.map(results => (
                 <PersonDetail
                   first={this.state.results.name.first}
                   last={this.state.results.name.last}
@@ -54,10 +55,9 @@ class Wrapper extends Component {
                   location={this.state.results.location.city}
                   dob={this.state.results.dob.age}
                   phone={this.state.results.phone}
-                />
-              ) : (
-                <h3>No Results to Display</h3>
-              )}
+                />))
+              ) : (<h3>No Results to Display</h3>)
+              }
             </Card>
           </Col>
           <Col size="md-4">
