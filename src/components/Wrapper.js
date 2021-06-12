@@ -15,11 +15,9 @@ class Wrapper extends Component {
 
   // When this component mounts, search for the movie "The Matrix"
   componentDidMount() {
-    this.getAll();
-  }
-
-  getAll = () => {
     API.getAll()
+    .then(res => this.setState({ results: res.data.results }))
+      .catch(err => console.log(err));;
   }
 
   // searchPeople = query => {
