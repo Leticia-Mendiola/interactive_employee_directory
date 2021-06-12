@@ -9,20 +9,24 @@ import API from "../utils/API";
 
 class Wrapper extends Component {
   state = {
-    result: {},
+    results: [],
     search: ""
   };
 
   // When this component mounts, search for the movie "The Matrix"
   componentDidMount() {
-    this.searchPeople("results=5000");
+    this.getAll();
   }
 
-  searchPeople = query => {
-    API.search(query)
-      .then(res => this.setState({ result: res.data }))
-      .catch(err => console.log(err));
-  };
+  getAll = () => {
+    API.getAll()
+  }
+
+  // searchPeople = query => {
+  //   API.search(query)
+  //     .then(res => this.setState({ result: res.data }))
+  //     .catch(err => console.log(err));
+  // };
 
   handleInputChange = event => {
     const value = event.target.value;
