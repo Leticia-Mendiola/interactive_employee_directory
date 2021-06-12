@@ -1,10 +1,10 @@
 import axios from "axios";
-const BASEURL = "https://randomuser.me/api";
+const BASEURL = "https://randomuser.me/api/";
 // const APIKEY = "&apikey=trilogy";
 
 export default {
   getAll: function(query) {
-    return axios.get(BASEURL + "/?results=5000")
+    return axios.get(BASEURL + "?results=5000")
   },
   search: function(query) {
     return axios.get(BASEURL + "/?" + query);
