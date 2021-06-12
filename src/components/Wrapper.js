@@ -44,15 +44,15 @@ class Wrapper extends Component {
         <Row>
           <Col size="md-8">
             <Card
-              heading={this.state.results.Title || "Search for an Employee"}
+              heading={this.state.results.name || "Search for an Employee"}
             >
-              {this.state.results.Title ? (
+              {this.state.results.name ? (
                 <PersonDetail
-                  title={this.state.results.Title}
-                  src={this.state.results.Poster}
-                  director={this.state.results.Director}
-                  genre={this.state.results.Genre}
-                  released={this.state.results.Released}
+                  title={this.state.results.name}
+                  // src={this.state.results.Poster}
+                  location={this.state.results.location}
+                  dob={this.state.results.dob}
+                  phone={this.state.results.phone}
                 />
               ) : (
                 <h3>No Results to Display</h3>
