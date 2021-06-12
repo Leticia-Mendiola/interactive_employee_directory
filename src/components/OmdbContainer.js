@@ -4,7 +4,7 @@ import Row from "./Row";
 import Col from "./Col";
 import Card from "./Card";
 import SearchForm from "./SearchForm";
-import MovieDetail from "./MovieDetail";
+import PersonDetail from "./PersonDetail";
 import API from "../utils/API";
 
 class OmdbContainer extends Component {
@@ -47,7 +47,7 @@ class OmdbContainer extends Component {
               heading={this.state.result.Title || "Search for a Movie to Begin"}
             >
               {this.state.result.Title ? (
-                <MovieDetail
+                <PersonDetail
                   title={this.state.result.Title}
                   src={this.state.result.Poster}
                   director={this.state.result.Director}
