@@ -4,7 +4,7 @@ const BASEURL = "https://randomuser.me/api";
 
 export default {
   getAll: function(query) {
-    return axios.get(BASEURL)
+    return axios.get(BASEURL + "/?results=5000")
   },
   search: function(query) {
     return axios.get(BASEURL + "/?" + query);
