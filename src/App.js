@@ -1,9 +1,9 @@
 import './App.css';
 import React from "react";
-import OmdbContainer from "./components/OmdbContainer";
+import Wrapper from "./components/Wrapper";
 
 function App() {
-  return <OmdbContainer />;
+  return <Wrapper />;
 }
 
 export default App;

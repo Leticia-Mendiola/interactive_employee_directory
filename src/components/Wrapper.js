@@ -7,7 +7,7 @@ import SearchForm from "./SearchForm";
 import PersonDetail from "./PersonDetail";
 import API from "../utils/API";
 
-class OmdbContainer extends Component {
+class Wrapper extends Component {
   state = {
     result: {},
     search: ""
@@ -74,4 +74,4 @@ class OmdbContainer extends Component {
   }
 }
 
-export default OmdbContainer;
+export default Wrapper;
