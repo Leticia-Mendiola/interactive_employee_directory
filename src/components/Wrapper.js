@@ -15,10 +15,10 @@ class Wrapper extends Component {
 
   // When this component mounts, search for the movie "The Matrix"
   componentDidMount() {
-    this.searchMovies("The Matrix");
+    this.searchPeople("results=5000");
   }
 
-  searchMovies = query => {
+  searchPeople = query => {
     API.search(query)
       .then(res => this.setState({ result: res.data }))
       .catch(err => console.log(err));
@@ -35,7 +35,7 @@ class Wrapper extends Component {
   // When the form is submitted, search the OMDB API for the value of `this.state.search`
   handleFormSubmit = event => {
     event.preventDefault();
-    this.searchMovies(this.state.search);
+    this.searchPeople(this.state.search);
   };
 
   render() {
@@ -44,7 +44,7 @@ class Wrapper extends Component {
         <Row>
           <Col size="md-8">
             <Card
-              heading={this.state.result.Title || "Search for a Movie to Begin"}
+              heading={this.state.result.Title || "Search for an Employee"}
             >
               {this.state.result.Title ? (
                 <PersonDetail
