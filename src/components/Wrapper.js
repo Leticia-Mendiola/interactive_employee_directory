@@ -9,14 +9,14 @@ import API from "../utils/API";
 
 class Wrapper extends Component {
   state = {
-    results: [],
+    results: {},
     search: ""
   };
 
   // When this component mounts, search for the movie "The Matrix"
   componentDidMount() {
     API.getAll()
-    .then(res => this.setState({ results: res.data.results }))
+    .then(res => this.setState({ results: res.data }))
       .catch(err => console.log(err));;
   }
 
@@ -48,7 +48,8 @@ class Wrapper extends Component {
             <Card
               // heading={this.state.results.name || "Search for an Employee"}
             >
-              {this.state.results.name.first ? (
+              {
+              // this.state.results.name.first ? (
                 this.state.results.map(results => (
                 <PersonDetail
                   first={this.state.results.name.first}
@@ -58,7 +59,7 @@ class Wrapper extends Component {
                   dob={this.state.results.dob.age}
                   phone={this.state.results.phone}
                 />))
-              ) : (<h3>No Results to Display</h3>)
+              // ) : (<h3>No Results to Display</h3>)
               }
             </Card>
           </Col>
