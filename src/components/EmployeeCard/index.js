@@ -12,9 +12,9 @@ function EmployeeCard(props) {
           <li>
             <strong>Name:</strong> {props.first}, {props.last}
           </li>
-          <li>
+          {/* <li>
             <strong>Age:</strong> {props.age}
-          </li>
+          </li> */}
           <li>
             <strong>Location:</strong> {props.city}, {props.state} {props.nat}
           </li>
