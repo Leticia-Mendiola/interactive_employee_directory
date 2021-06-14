@@ -26,6 +26,9 @@ function App() {
         age={results.dob.age}
         city={results.location.city}
         state={results.location.state}
+        nat={results.nat}
+        email={results.email}
+        phone={results.phone}
         />))
       }
     </Wrapper>
