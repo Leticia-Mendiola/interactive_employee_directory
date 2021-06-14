@@ -1,9 +1,9 @@
 import './App.css';
 import React from "react";
-import Wrapper from "./components/Wrapper";
+import Home from "./pages/home";
 
 function App() {
-  return <Wrapper />;
+  return <Home />;
 }
 
 export default App;
