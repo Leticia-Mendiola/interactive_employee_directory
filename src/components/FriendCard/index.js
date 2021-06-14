@@ -1,21 +1,22 @@
 import React from "react";
+import "./style.css";
 
-function Personnel(props) {
+function FriendCard(props) {
   return (
     <div className="card">
       <div className="img-container">
-        <img alt={props.name.last} src={props.image} />
+        <img alt={props.name} src={props.image} />
       </div>
       <div className="content">
         <ul>
           <li>
-            <strong>Name:</strong> {props.name.first} {props.name.last}
+            <strong>Name:</strong> {props.name}
           </li>
           <li>
-            <strong>Age:</strong> {props.dob.age}
+            <strong>Occupation:</strong> {props.occupation}
           </li>
           <li>
-            <strong>Phone:</strong> {props.phone}
+            <strong>Location:</strong> {props.location}
           </li>
         </ul>
       </div>
@@ -23,4 +24,4 @@ function Personnel(props) {
   );
 }
 
-export default Personnel;
+export default FriendCard;
