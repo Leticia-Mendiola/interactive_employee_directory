@@ -4,7 +4,7 @@ import Row from "./Row";
 import Col from "./Col";
 import Card from "./Card";
 import SearchForm from "./SearchForm";
-import PersonDetail from "./PersonDetail";
+import Personnel from "./Personnel";
 import API from "../utils/API";
 
 class Wrapper extends Component {
@@ -51,7 +51,7 @@ class Wrapper extends Component {
               {
               // this.state.results.name.first ? (
                 this.state.results.map(results => (
-                <PersonDetail
+                <Personnel
                   first={this.state.results.name.first}
                   last={this.state.results.name.last}
                   src={this.state.results.picture.medium}
