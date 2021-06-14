@@ -20,10 +20,12 @@ function App() {
       <Title>Employees</Title>
       { results.map(results => (
         <EmployeeCard
-        name={results.name.first}
-        image={results.picture.medium}
+        first={results.name.first}
+        last={results.name.last}
+        image={results.picture.large}
         age={results.dob.age}
-        location={results.location.city}
+        city={results.location.city}
+        state={results.location.state}
         />))
       }
     </Wrapper>

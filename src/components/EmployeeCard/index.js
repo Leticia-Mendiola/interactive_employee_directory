@@ -5,18 +5,18 @@ function EmployeeCard(props) {
   return (
     <div className="card">
       <div className="img-container">
-        <img alt={props.name} src={props.image} />
+        <img alt={props.first,props.last} src={props.image} />
       </div>
       <div className="content">
         <ul>
           <li>
-            <strong>Name:</strong> {props.name}
+            <strong>Name:</strong> {props.first} {props.last}
           </li>
           <li>
             <strong>Age:</strong> {props.age}
           </li>
           <li>
-            <strong>Location:</strong> {props.location}
+            <strong>Location:</strong> {props.city} {props.state}
           </li>
         </ul>
       </div>
