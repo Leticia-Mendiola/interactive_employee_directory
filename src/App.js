@@ -12,16 +12,15 @@ import Alert from "../components/Alert";
 class Search extends Component {
   state = {
     search: "",
-    breeds: [],
+    city: [],
     results: [],
     error: ""
   };
 
-  // When the component mounts, get a list of all available base breeds and update this.state.breeds
-  componentDidMount() {
-    API.getBaseBreedsList()
-      .then(res => this.setState({ breeds: res.data.message }))
-      .catch(err => console.log(err));
+  // When the component mounts, get a list of all available cities and update this.state.city
+  componentDidMount = () => {
+    this.setState({ city: results.location.city })
+    this.catch(err => console.log(err));
   }
 
   handleInputChange = event => {
