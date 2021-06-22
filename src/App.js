@@ -2,49 +2,13 @@ import React, { Component } from "react";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import EmployeeCard from "./components/EmployeeCard";
+import Search from "./components/Search";
 import results from "./results.json";
-import API from "../utils/API";
-import Container from "../components/Container";
-import SearchForm from "../components/SearchForm";
-import SearchResults from "../components/SearchResults";
-import Alert from "../components/Alert";
-
-class Search extends Component {
-  state = {
-    search: "",
-    city: [],
-    results: [],
-    error: ""
-  };
-
-  // When the component mounts, get a list of all available cities and update this.state.city
-  componentDidMount = () => {
-    this.setState({ city: results.location.city })
-    this.catch(err => console.log(err));
-  }
-
-  handleInputChange = event => {
-    this.setState({ search: event.target.value });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    this.state.search
-      .then(res => {
-        if (res.data.status === "error") {
-          throw new Error(res.data.message);
-        }
-        this.setState({ results: res.data.message, error: "" });
-      })
-      .catch(err => this.setState({ error: err.message }));
-  };
-}
-
-export default Search;
 
 function App() {
   return (
     <Wrapper>
+      <Search />
       <Title>Employees</Title>
       <div>
         <Container style={{ minHeight: "80%" }}>
