@@ -29,7 +29,7 @@ class Search extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    API.getDogsOfBreed(this.state.search)
+    this.state.search
       .then(res => {
         if (res.data.status === "error") {
           throw new Error(res.data.message);
@@ -38,8 +38,14 @@ class Search extends Component {
       })
       .catch(err => this.setState({ error: err.message }));
   };
-  render() {
-    return (
+}
+
+export default Search;
+
+function App() {
+  return (
+    <Wrapper>
+      <Title>Employees</Title>
       <div>
         <Container style={{ minHeight: "80%" }}>
           <h1 className="text-center">Search By Breed!</h1>
@@ -57,16 +63,6 @@ class Search extends Component {
           <SearchResults results={this.state.results} />
         </Container>
       </div>
-    );
-  }
-}
-
-export default Search;
-
-function App() {
-  return (
-    <Wrapper>
-      <Title>Employees</Title>
       { results.map(results => (
         <EmployeeCard
         first={results.name.first}
