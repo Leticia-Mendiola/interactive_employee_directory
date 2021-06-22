@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import results from "../..results.json";
+import results from "../../results.json";
 import Container from "../Container";
 import SearchForm from "../SearchForm";
 import SearchResults from "../SearchResults";
